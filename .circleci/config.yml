@@ -53,10 +53,10 @@ workflows:
       - test:
           requires:
             - build 
-      - oast:
-	  requires:
-	    - oast 
-     - integration:
+      - oast
+          requires:
+            - test 
+      - integration:
           requires:
             - test
       - prod:
